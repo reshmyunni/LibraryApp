@@ -39,9 +39,9 @@
         </div>
         <!-- <div style="padding: 50px;background-color: white;"></div> -->
     </section>
-    <section class="contentSection">
+    <div class="contentSection">
 
-        <form action="">
+        <form class="login">
             <div class="container">
 
 
@@ -56,13 +56,13 @@
                             <tr>
                                 <td>Username</td>
                                 <td><input type="text" class="form-control" id="username" valid>
-                                    <p id="uname"></p>
+                                    <p id="uname" style="color: red;font-size: medium;"></p>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Password</td>
                                 <td><input type="password" class="form-control" id="password" valid>
-                                    <p id="pwd"></p>
+                                    <p id="pwd" style="color: red;font-size: medium;"></p>
                                 </td>
                             </tr><br>
                             <tr>
@@ -88,13 +88,14 @@
                     </div>
                 </div>
         </form>
-    </section>
+    </div>
 
 
     <script>
         function emptyFieldValidation() {
             clearErrorText();
             var username = document.getElementById("username").value;
+            console.log(username);
             var password = document.getElementById("password").value;
             if (username === "") {
                 document.getElementById("uname").innerHTML = "Please enter your username";
